@@ -10,8 +10,8 @@ import os
 from datetime import datetime
 from typing import Dict, Optional
 
-from extractor import extract_all, mask_sensitive_data
-from security import SecurityValidator, validate_and_report, create_safe_output
+from src.extractor import extract_all, mask_sensitive_data
+from src.security import SecurityValidator, validate_and_report, create_safe_output
 
 
 def print_banner():
@@ -283,9 +283,9 @@ def main():
             return
         input_file = sys.argv[1]
     else:
-        # Default to sample_input.txt in same directory
+        # Default to sample_input.txt in data/input directory
         script_dir = os.path.dirname(os.path.abspath(__file__))
-        input_file = os.path.join(script_dir, 'sample_input.txt')
+        input_file = os.path.join(script_dir, 'data', 'input', 'sample_input.txt')
     
     print(f"📂 Input File: {input_file}")
     
@@ -309,7 +309,8 @@ def main():
     format_security_report(security_report)
     
     # Step 4: Save JSON Output
-    output_file = os.path.join(os.path.dirname(input_file), 'output.json')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_file = os.path.join(script_dir, 'data', 'output', 'output.json')
     print(f"\n💾 Saving results to: {output_file}")
     if save_json_output(extracted_data, security_report, output_file):
         print("   ✅ JSON output saved successfully")

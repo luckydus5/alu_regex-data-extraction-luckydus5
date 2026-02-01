@@ -2,6 +2,25 @@
 
 A Python program that extracts structured data from text using regular expressions. This project was built for the ALU Regex Hackathon assignment.
 
+## Project Structure
+
+```
+alu_regex-data-extraction-luckydus5/
+├── main.py                 # Entry point - runs the program
+├── README.md               # Project documentation
+├── src/                    # Source code modules
+│   ├── __init__.py         # Package initialization
+│   ├── extractor.py        # Regex patterns for data extraction
+│   └── security.py         # Security validation and threat detection
+├── data/
+│   ├── input/              # Input files
+│   │   └── sample_input.txt
+│   └── output/             # Generated output files
+│       └── output.json
+└── tests/                  # Test files
+    └── __init__.py
+```
+
 ## What it does
 
 The program reads text input and extracts:
@@ -29,11 +48,11 @@ python main.py yourfile.txt
 
 ## Files
 
-- `main.py` - runs the program
-- `extractor.py` - contains all the regex patterns
-- `security.py` - checks for malicious input
-- `sample_input.txt` - test data
-- `output.json` - results after running
+- `main.py` - Entry point, runs the program
+- `src/extractor.py` - Contains all the regex patterns
+- `src/security.py` - Checks for malicious input
+- `data/input/sample_input.txt` - Test data
+- `data/output/output.json` - Results after running
 
 ## Regex Patterns
 
