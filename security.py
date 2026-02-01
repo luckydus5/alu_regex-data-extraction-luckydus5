@@ -1,17 +1,6 @@
 """
-Security Validation Module
-==========================
-This module provides security-focused validation and sanitization functions
-for handling potentially malicious or malformed input.
-
-Security Features:
-- Input sanitization and length limits
-- Injection pattern detection (SQL, XSS, Command)
-- Sensitive data masking for logs
-- Content Security Policy awareness for HTML
-
-This module demonstrates defensive programming practices
-for processing untrusted external data.
+Security checks for detecting malicious input like SQL injection, XSS, etc.
+Also masks sensitive data before logging.
 """
 
 import re

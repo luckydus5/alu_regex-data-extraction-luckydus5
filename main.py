@@ -1,21 +1,7 @@
 #!/usr/bin/env python3
 """
-Data Extraction & Secure Validation - Main Runner
-=================================================
-This script demonstrates the complete data extraction and validation pipeline.
-
-Features:
-- Extracts 8 types of structured data from raw text
-- Validates input for security threats
-- Masks sensitive data in output
-- Produces structured JSON output
-
-Usage:
-    python main.py                    # Use default sample_input.txt
-    python main.py custom_file.txt    # Use custom input file
-    python main.py --help             # Show help
-
-Author: Data Extraction Hackathon Submission
+Main script - reads text file and extracts data using regex patterns.
+Run with: python main.py [optional_file.txt]
 """
 
 import json
@@ -24,7 +10,6 @@ import os
 from datetime import datetime
 from typing import Dict, Optional
 
-# Import our modules
 from extractor import extract_all, mask_sensitive_data
 from security import SecurityValidator, validate_and_report, create_safe_output
 

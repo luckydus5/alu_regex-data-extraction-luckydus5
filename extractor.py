@@ -1,23 +1,6 @@
 """
-Data Extraction Module
-======================
-This module contains regex patterns and extraction functions for identifying
-structured data types from raw text input.
-
-Implements extraction for all 8 data types:
-- Email addresses
-- URLs
-- Phone numbers
-- Credit card numbers
-- Time formats (12-hour and 24-hour)
-- HTML tags
-- Hashtags
-- Currency amounts
-
-Security Considerations:
-- All patterns are designed to reject malformed or potentially malicious input
-- Sensitive data (emails, credit cards) are masked in output logs
-- Input sanitization is performed before extraction
+Regex patterns and functions to extract data from text.
+Handles emails, URLs, phone numbers, credit cards, times, HTML tags, hashtags, and currency.
 """
 
 import re
