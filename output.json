@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2026-02-01T08:22:44.794422",
+    "timestamp": "2026-02-01T08:29:03.111906",
     "version": "1.0.0",
     "description": "Data Extraction & Validation Results"
   },
@@ -17,7 +17,7 @@
   },
   "extracted_data": {
     "emails": {
-      "count": 15,
+      "count": 20,
       "values": [
         "i**o@company.com",
         "s**********m@techcorp.io",
@@ -25,13 +25,18 @@
         "j******e@hr-department.org",
         "f****************e@startup.company.com",
         "c*o@bigcompany.net",
+        "j*******a@alustudent.com",
+        "d*********a@alustudent.com",
+        "k******i@alustudent.com",
+        "p********a@alustudent.com",
+        "m*********a@alustudent.com",
         "u*****3@gmail.com",
         "a********r@domain-name.org",
         "c************r@example.com",
         "a******r@evil.com",
-        "s***********n@techstartup.io",
+        "j*******a@alustudent.com",
         "c************t@enterprise.com",
-        "s*****t@techstartup.io",
+        "a*******e@alustudent.com",
         "u**r@domain.com",
         "u**r@domain.com"
       ]
@@ -59,19 +64,22 @@
       ]
     },
     "phone_numbers": {
-      "count": 11,
+      "count": 14,
       "values": [
-        "(555) 123-4567",
-        "800-555-0199",
-        "555-867-5309",
-        "555.432.1098",
-        "+1-555-911-0000",
-        "(555) 123-4568",
-        "123-456-7890",
-        "(987) 654-3210",
+        "+250 788 123 456",
+        "0788 456 789",
+        "+250 722 345 678",
+        "0799 876 543",
+        "+250 738 555 000",
+        "0723 111 222",
+        "+250 782 000 111",
+        "0722 987 654",
+        "+250 788 555 123",
+        "0738456789",
+        "+250-788-123-456",
         "+1 555 234 5678",
-        "8506082832",
-        "(555) 234-5678"
+        "+44 20 7946 0958",
+        "+250 788 234 567"
       ]
     },
     "credit_cards": {
@@ -223,7 +231,7 @@
     }
   },
   "summary": {
-    "total_items_extracted": 147,
+    "total_items_extracted": 155,
     "dangerous_items_blocked": 15
   }
 }

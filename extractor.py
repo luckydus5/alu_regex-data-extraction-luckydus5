@@ -55,16 +55,24 @@ URL_PATTERN = re.compile(
 
 # PHONE NUMBER PATTERN
 # --------------------
-# Matches various US phone formats: (123) 456-7890, 123-456-7890, 123.456.7890
-# Also handles international format with country code: +1-234-567-8900
+# Matches Rwandan and international phone formats:
+#   Rwandan: +250 788 123 456, 0788 456 789, +250-788-123-456
+#   US: (123) 456-7890, 123-456-7890, +1 555 234 5678
+#   UK: +44 20 7946 0958
 # Security: Limits length to prevent buffer overflow attempts
 # Pattern breakdown:
-#   - (?:\+1[-.\s]?)? : Optional US country code
-#   - (?:\(?\d{3}\)?[-.\s]?) : Area code with optional parentheses
-#   - \d{3}[-.\s]? : First three digits
-#   - \d{4} : Last four digits
+#   - Rwandan: +250 or 0 followed by 7[2389]X XXX XXX (9 digits after prefix)
+#   - US: Optional +1, then 10 digits in various formats
+#   - UK: +44 followed by area code and number
 PHONE_PATTERN = re.compile(
-    r'(?:\+1[-.\s]?)?(?:\(?\d{3}\)?[-.\s]?)\d{3}[-.\s]?\d{4}\b'
+    r'(?:'
+    r'\+250[-.\s]?[0]?7[2389]\d[-.\s]?\d{3}[-.\s]?\d{3,4}'  # Rwandan: +250 78X XXX XXX
+    r'|07[2389]\d[-.\s]?\d{3}[-.\s]?\d{3}'  # Rwandan local: 078X XXX XXX
+    r'|\+1[-.\s]?\d{3}[-.\s]?\d{3}[-.\s]?\d{4}'  # US: +1 XXX XXX XXXX
+    r'|\+44[-.\s]?\d{2}[-.\s]?\d{4}[-.\s]?\d{4}'  # UK: +44 XX XXXX XXXX
+    r'|\(\d{3}\)[-.\s]?\d{3}[-.\s]?\d{4}'  # US: (XXX) XXX-XXXX
+    r'|\d{3}[-.\s]\d{3}[-.\s]\d{4}'  # US: XXX-XXX-XXXX
+    r')'
 )
 
 # CREDIT CARD PATTERN

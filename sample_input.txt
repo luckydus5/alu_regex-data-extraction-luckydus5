@@ -18,6 +18,13 @@ Please contact our team at the following addresses:
 
 Our CEO can be reached at ceo@bigcompany.net for urgent matters.
 
+ALU Student Contacts:
+* j.uwimana@alustudent.com (Software Engineering)
+* d.niyonzima@alustudent.com (Computer Science)
+* k.mutesi@alustudent.com (Data Science)
+* p.habimana@alustudent.com (Business)
+* m.ndayisaba@alustudent.com (Entrepreneurship)
+
 Alternative contacts:
 * user123@gmail.com (Personal)
 * admin_user@domain-name.org (Admin)
@@ -51,25 +58,32 @@ Potentially malicious URLs that should be FLAGGED:
 - https://evil.com/<script>document.cookie</script>
 
 ================================================================================
-SECTION 3: PHONE NUMBERS (US Formats)
+SECTION 3: PHONE NUMBERS (Rwandan & International Formats)
 ================================================================================
 
 Contact Directory:
 ┌─────────────────────────────────────────────────────────┐
 │ Name              │ Phone Number                        │
 ├─────────────────────────────────────────────────────────┤
-│ Main Office       │ (555) 123-4567                      │
-│ Support Hotline   │ 1-800-555-0199                      │
-│ Sales Team        │ 555-867-5309                        │
-│ HR Department     │ 555.432.1098                        │
-│ Emergency         │ +1-555-911-0000                     │
-│ Fax               │ (555) 123-4568                      │
+│ Main Office       │ +250 788 123 456                    │
+│ Support Hotline   │ 0788 456 789                        │
+│ Sales Team        │ +250 722 345 678                    │
+│ HR Department     │ 0799 876 543                        │
+│ Emergency         │ +250 738 555 000                    │
+│ Student Services  │ 0723 111 222                        │
+│ ALU Campus        │ +250 782 000 111                    │
 └─────────────────────────────────────────────────────────┘
 
-Other valid formats:
-- Call us at 123-456-7890 for more information
-- Text (987) 654-3210 for quick responses
-- International: +1 555 234 5678
+Rwandan Mobile Formats:
+- MTN Rwanda: +250 78 312 4567
+- Airtel Rwanda: 0722 987 654
+- With spaces: +250 788 555 123
+- Without spaces: 0738456789
+- Dashes format: +250-788-123-456
+
+International contacts:
+- US Office: +1 555 234 5678
+- UK Office: +44 20 7946 0958
 
 ================================================================================
 SECTION 4: CREDIT CARD NUMBERS
@@ -218,7 +232,7 @@ SECTION 9: MIXED REAL-WORLD SCENARIO
 
 --- Email Thread ---
 
-From: sarah.johnson@techstartup.io
+From: j.mugisha@alustudent.com
 To: client.contact@enterprise.com
 Date: January 15, 2024 at 10:30 AM
 Subject: Project Update & Invoice
@@ -230,7 +244,7 @@ Please find the project update below:
 Our website https://www.techstartup.io/projects/demo is now live! 
 Check out the documentation at https://docs.techstartup.io/guide.
 
-For support, call us at (555) 234-5678 or email support@techstartup.io.
+For support, call us at +250 788 234 567 or email a.ishimwe@alustudent.com.
 
 Invoice Details:
 - Development: $15,000.00
