@@ -16,14 +16,6 @@ The program reads text input and extracts:
 
 It also checks for security issues like SQL injection and XSS attempts.
 
-## Screenshots
-
-### Program Output
-![Output](screenshots/output.png)
-
-### Security Check
-![Security](screenshots/security.png)
-
 ## How to run
 
 ```bash
