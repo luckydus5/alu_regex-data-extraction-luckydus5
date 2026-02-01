@@ -205,3 +205,9 @@ The program also saves results to `output.json`:
 
 - Python 3.6 or higher
 - No external packages needed
+
+## Author
+
+**Olivier Dusabamahoro**
+
+This project is part of the ALU Regex Hackathon assignment (For Educational Purpose).
