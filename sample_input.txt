@@ -1,0 +1,281 @@
+================================================================================
+                    SAMPLE INPUT DATA - REALISTIC TEXT SCENARIOS
+================================================================================
+This file contains realistic text data as it might appear in production systems,
+including various formats, edge cases, and some intentionally malicious inputs
+to test security measures.
+
+================================================================================
+SECTION 1: EMAIL ADDRESSES (Various Formats)
+================================================================================
+
+Please contact our team at the following addresses:
+- General inquiries: info@company.com
+- Technical support: support.team@techcorp.io
+- Sales department: sales@enterprise.co.uk
+- HR Contact: john.doe@hr-department.org
+- Developer: firstname.lastname@startup.company.com
+
+Our CEO can be reached at ceo@bigcompany.net for urgent matters.
+
+Alternative contacts:
+* user123@gmail.com (Personal)
+* admin_user@domain-name.org (Admin)
+* contact+filter@example.com (With plus addressing)
+
+Invalid/Malicious emails that should be REJECTED:
+- not-an-email
+- @nodomain.com
+- user@<script>alert('xss')</script>.com
+- attacker@evil.com'; DROP TABLE users; --
+
+================================================================================
+SECTION 2: URLs (HTTP/HTTPS with Various Paths)
+================================================================================
+
+Visit our websites:
+• Homepage: https://www.example.com
+• Documentation: https://docs.example.org/getting-started
+• API Reference: https://api.company.io/v2/reference
+• Blog: https://blog.techsite.com/2024/01/new-features
+• Secure Portal: https://secure.banking-site.com/login
+
+Subdomains and complex paths:
+- https://subdomain.example.org/page?id=123&lang=en
+- https://cdn.assets.company.com/images/logo.png
+- https://app.service.io/dashboard/settings#preferences
+
+Potentially malicious URLs that should be FLAGGED:
+- javascript:alert('XSS')
+- data:text/html,<script>alert('evil')</script>
+- https://evil.com/<script>document.cookie</script>
+
+================================================================================
+SECTION 3: PHONE NUMBERS (US Formats)
+================================================================================
+
+Contact Directory:
+┌─────────────────────────────────────────────────────────┐
+│ Name              │ Phone Number                        │
+├─────────────────────────────────────────────────────────┤
+│ Main Office       │ (555) 123-4567                      │
+│ Support Hotline   │ 1-800-555-0199                      │
+│ Sales Team        │ 555-867-5309                        │
+│ HR Department     │ 555.432.1098                        │
+│ Emergency         │ +1-555-911-0000                     │
+│ Fax               │ (555) 123-4568                      │
+└─────────────────────────────────────────────────────────┘
+
+Other valid formats:
+- Call us at 123-456-7890 for more information
+- Text (987) 654-3210 for quick responses
+- International: +1 555 234 5678
+
+================================================================================
+SECTION 4: CREDIT CARD NUMBERS
+================================================================================
+
+Sample Transaction Records (TEST DATA ONLY - NOT REAL):
+--------------------------------------------------------
+Transaction ID: TXN-001
+Card: 4532 0151 2842 7563
+Amount: $125.99
+Status: Approved
+
+Transaction ID: TXN-002  
+Card: 5425-2334-3010-9903
+Amount: $89.50
+Status: Approved
+
+Transaction ID: TXN-003
+Card: 4916338506082832
+Amount: $245.00
+Status: Approved
+
+Invalid card numbers (should fail Luhn check):
+- 1234 5678 9012 3456 (Invalid checksum)
+- 0000-0000-0000-0000 (Invalid)
+
+================================================================================
+SECTION 5: TIME FORMATS (12-hour and 24-hour)
+================================================================================
+
+Schedule for Monday, January 15th:
+──────────────────────────────────
+08:00 - Team standup meeting
+09:30 - Client call
+10:15 - Code review session  
+12:00 - Lunch break
+14:30 - Sprint planning
+16:45 - One-on-one with manager
+18:00 - End of day
+
+Appointment Reminders:
+• Doctor: 9:30 AM
+• Dentist: 2:30 PM  
+• Meeting: 11:00 AM
+• Dinner: 7:00 PM
+• Flight departure: 6:15 AM
+
+24-hour format examples:
+- Server maintenance: 23:59
+- Backup starts: 03:00
+- System restart: 00:15
+
+================================================================================
+SECTION 6: HTML TAGS (Safe and Potentially Dangerous)
+================================================================================
+
+Valid HTML Elements (Safe):
+<p>This is a paragraph element.</p>
+<div class="container">Content here</div>
+<span id="highlight">Highlighted text</span>
+<img src="photo.jpg" alt="A beautiful sunset"/>
+<a href="/page">Link text</a>
+<br/>
+<hr>
+<h1>Main Heading</h1>
+<ul><li>List item</li></ul>
+<table><tr><td>Cell</td></tr></table>
+
+Self-closing tags:
+<input type="text" name="username"/>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles.css">
+
+DANGEROUS HTML (Should be flagged):
+<script>alert('XSS Attack!')</script>
+<img src="x" onerror="alert('XSS')">
+<iframe src="https://malicious-site.com"></iframe>
+<div onclick="stealCookies()">Click me</div>
+<a href="javascript:void(0)">Bad link</a>
+<object data="malware.swf"></object>
+<embed src="exploit.swf">
+<form action="https://phishing-site.com/steal">
+<body onload="maliciousFunction()">
+
+================================================================================
+SECTION 7: HASHTAGS (Social Media Tags)
+================================================================================
+
+Trending topics on social media:
+
+#TechNews - Latest updates from the tech world
+#WebDevelopment - Tips and tricks for developers
+#Python3 - Everything about Python programming
+#JavaScript - JS frameworks and libraries
+#DataScience - Machine learning and AI discussions
+#CyberSecurity - Stay safe online
+#OpenSource - Community-driven projects
+#CodeNewbie - Resources for beginners
+#100DaysOfCode - Coding challenge community
+#RemoteWork - Work from home lifestyle
+#Hackathon - Coding competitions and events
+#RegEx - Regular expression patterns
+
+Mixed case examples:
+#ThisIsAHashtag
+#mixedCASEtag
+#ALLCAPS
+
+Invalid hashtags (should not match):
+#123startswithnumber (starts with number)
+# spacetag (space after hash)
+
+================================================================================
+SECTION 8: CURRENCY AMOUNTS (USD)
+================================================================================
+
+Invoice #INV-2024-001
+─────────────────────
+Product A                    $19.99
+Product B                    $149.50
+Service Fee                  $75.00
+Premium Package              $1,234.56
+Enterprise License           $12,500.00
+Annual Subscription          $99.99
+──────────────────────────────────────
+Subtotal                     $14,079.04
+Tax (8%)                     $1,126.32
+──────────────────────────────────────
+TOTAL                        $15,205.36
+
+Other currency examples:
+• Budget: $50,000.00
+• Petty cash: $25
+• Coffee: $4.50
+• Salary: $85,000
+• Bonus: $2,500.00
+• Refund: $199.99
+
+Large amounts:
+$1,000,000.00 (One million dollars)
+$999,999.99
+
+================================================================================
+SECTION 9: MIXED REAL-WORLD SCENARIO
+================================================================================
+
+--- Email Thread ---
+
+From: sarah.johnson@techstartup.io
+To: client.contact@enterprise.com
+Date: January 15, 2024 at 10:30 AM
+Subject: Project Update & Invoice
+
+Hi Team,
+
+Please find the project update below:
+
+Our website https://www.techstartup.io/projects/demo is now live! 
+Check out the documentation at https://docs.techstartup.io/guide.
+
+For support, call us at (555) 234-5678 or email support@techstartup.io.
+
+Invoice Details:
+- Development: $15,000.00
+- Hosting (Annual): $1,200.00
+- Support Package: $3,500.00
+
+Payment can be made using card ending in ****-****-****-7563.
+
+Meeting scheduled for 2:30 PM tomorrow.
+
+Follow us on social media: #TechStartup #Innovation #WebDev
+
+Best regards,
+Sarah Johnson
+<div class="signature">
+<p>Sarah Johnson</p>
+<p>CEO, TechStartup Inc.</p>
+</div>
+
+================================================================================
+SECTION 10: ADVERSARIAL/MALICIOUS INPUT TESTS
+================================================================================
+
+These inputs are designed to test security measures:
+
+SQL Injection Attempts:
+- user@domain.com'; DROP TABLE users; --
+- admin'--@company.com
+- https://site.com/page?id=1 OR 1=1--
+
+XSS Attempts:
+- test@<script>alert(1)</script>domain.com
+- https://evil.com/page?q=<script>document.cookie</script>
+- <img src=x onerror="alert('XSS')">
+
+Command Injection:
+- user@domain.com; rm -rf /
+- https://site.com/$(whoami)
+
+Path Traversal:
+- https://site.com/../../../etc/passwd
+
+Unicode Abuse:
+- test@dоmain.com (Cyrillic 'о' instead of Latin 'o')
+
+================================================================================
+END OF SAMPLE INPUT
+================================================================================

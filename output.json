@@ -1,0 +1,229 @@
+{
+  "metadata": {
+    "timestamp": "2026-02-01T08:22:44.794422",
+    "version": "1.0.0",
+    "description": "Data Extraction & Validation Results"
+  },
+  "security": {
+    "is_safe": false,
+    "threat_level": "high",
+    "issues_count": 17,
+    "recommendations": [
+      "Sanitize SQL-like patterns before processing",
+      "Encode HTML entities in output",
+      "Never pass user input directly to shell commands",
+      "Validate and sanitize file paths"
+    ]
+  },
+  "extracted_data": {
+    "emails": {
+      "count": 15,
+      "values": [
+        "i**o@company.com",
+        "s**********m@techcorp.io",
+        "s***s@enterprise.co.uk",
+        "j******e@hr-department.org",
+        "f****************e@startup.company.com",
+        "c*o@bigcompany.net",
+        "u*****3@gmail.com",
+        "a********r@domain-name.org",
+        "c************r@example.com",
+        "a******r@evil.com",
+        "s***********n@techstartup.io",
+        "c************t@enterprise.com",
+        "s*****t@techstartup.io",
+        "u**r@domain.com",
+        "u**r@domain.com"
+      ]
+    },
+    "urls": {
+      "count": 17,
+      "values": [
+        "https://www.example.com",
+        "https://docs.example.org/getting-started",
+        "https://api.company.io/v2/reference",
+        "https://blog.techsite.com/2024/01/new-features",
+        "https://secure.banking-site.com/login",
+        "https://subdomain.example.org/page?id=123&lang=en",
+        "https://cdn.assets.company.com/images/logo.png",
+        "https://app.service.io/dashboard/settings#preferences",
+        "https://evil.com/",
+        "https://malicious-site.com",
+        "https://phishing-site.com/steal",
+        "https://www.techstartup.io/projects/demo",
+        "https://docs.techstartup.io/guide.",
+        "https://site.com/page?id=1",
+        "https://evil.com/page?q=",
+        "https://site.com/$(whoami)",
+        "https://site.com/../../../etc/passwd"
+      ]
+    },
+    "phone_numbers": {
+      "count": 11,
+      "values": [
+        "(555) 123-4567",
+        "800-555-0199",
+        "555-867-5309",
+        "555.432.1098",
+        "+1-555-911-0000",
+        "(555) 123-4568",
+        "123-456-7890",
+        "(987) 654-3210",
+        "+1 555 234 5678",
+        "8506082832",
+        "(555) 234-5678"
+      ]
+    },
+    "credit_cards": {
+      "count": 3,
+      "values": [
+        "****-****-****-9903",
+        "****-****-****-2832",
+        "****-****-****-0000"
+      ]
+    },
+    "times": {
+      "count": 17,
+      "values": [
+        "08:00",
+        "09:30",
+        "10:15",
+        "12:00",
+        "14:30",
+        "16:45",
+        "18:00",
+        "9:30",
+        "2:30",
+        "11:00",
+        "7:00",
+        "6:15",
+        "23:59",
+        "03:00",
+        "00:15",
+        "10:30",
+        "2:30"
+      ]
+    },
+    "html_tags": {
+      "safe_count": 42,
+      "dangerous_count": 15,
+      "safe_tags": [
+        "</script>",
+        "</script>",
+        "</script>",
+        "<p>",
+        "</p>",
+        "<div class=\"container\">",
+        "</div>",
+        "<span id=\"highlight\">",
+        "</span>",
+        "<img src=\"photo.jpg\" alt=\"A beautiful sunset\"/>",
+        "<a href=\"/page\">",
+        "</a>",
+        "<br/>",
+        "<hr>",
+        "<h1>",
+        "</h1>",
+        "<ul>",
+        "<li>",
+        "</li>",
+        "</ul>",
+        "<table>",
+        "<tr>",
+        "<td>",
+        "</td>",
+        "</tr>",
+        "</table>",
+        "<input type=\"text\" name=\"username\"/>",
+        "<meta charset=\"UTF-8\">",
+        "<link rel=\"stylesheet\" href=\"styles.css\">",
+        "</script>",
+        "</iframe>",
+        "</div>",
+        "</a>",
+        "</object>",
+        "<div class=\"signature\">",
+        "<p>",
+        "</p>",
+        "<p>",
+        "</p>",
+        "</div>",
+        "</script>",
+        "</script>"
+      ],
+      "dangerous_tags": [
+        "<script>",
+        "<script>",
+        "<script>",
+        "<script>",
+        "<img src=\"x\" onerror=\"alert('XSS')\">",
+        "<iframe src=\"https://malicious-site.com\">",
+        "<div onclick=\"stealCookies()\">",
+        "<a href=\"javascript:void(0)\">",
+        "<object data=\"malware.swf\">",
+        "<embed src=\"exploit.swf\">",
+        "<form action=\"https://phishing-site.com/steal\">",
+        "<body onload=\"maliciousFunction()\">",
+        "<script>",
+        "<script>",
+        "<img src=x onerror=\"alert('XSS')\">"
+      ]
+    },
+    "hashtags": {
+      "count": 19,
+      "values": [
+        "#preferences",
+        "#TechNews",
+        "#WebDevelopment",
+        "#Python3",
+        "#JavaScript",
+        "#DataScience",
+        "#CyberSecurity",
+        "#OpenSource",
+        "#CodeNewbie",
+        "#RemoteWork",
+        "#Hackathon",
+        "#RegEx",
+        "#ThisIsAHashtag",
+        "#mixedCASEtag",
+        "#ALLCAPS",
+        "#INV",
+        "#TechStartup",
+        "#Innovation",
+        "#WebDev"
+      ]
+    },
+    "currency": {
+      "count": 23,
+      "values": [
+        "$125.99",
+        "$89.50",
+        "$245.00",
+        "$19.99",
+        "$149.50",
+        "$75.00",
+        "$1,234.56",
+        "$12,500.00",
+        "$99.99",
+        "$14,079.04",
+        "$1,126.32",
+        "$15,205.36",
+        "$50,000.00",
+        "$25",
+        "$4.50",
+        "$85,000",
+        "$2,500.00",
+        "$199.99",
+        "$1,000,000.00",
+        "$999,999.99",
+        "$15,000.00",
+        "$1,200.00",
+        "$3,500.00"
+      ]
+    }
+  },
+  "summary": {
+    "total_items_extracted": 147,
+    "dangerous_items_blocked": 15
+  }
+}
